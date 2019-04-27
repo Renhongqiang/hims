@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.action.extension" value=","/>
+    <!-- 默认命名空间 -->
+    <package name="default" namespace="/" extends="struts-default">
+        <!-- 配置默认action -->
+        <default-action-ref name="index" />
+        <action name="index">
+            <result>/index.jsp</result>
+        </action>
+        <action name="register_page">
+            <result>/WEB-INF/content/register.jsp</result>
+        </action>
+        <action name="error">
+            <result>/WEB-INF/content/error.jsp</result>
+        </action>
+    </package>
+
+    <package name="hims" namespace="/" extends="struts-default">
+        <action name="login" class="com.hims.action.LoginAction">
+            <result name="success">/WEB-INF/content/main.jsp</result>
+            <result name="input">/index.jsp</result>
+            <result name="error">/WEB-INF/content/error.jsp</result>
+        </action>
+        <action name="register" class="com.hims.action.RegisterAction">
+            <result name="success">/index.jsp</result>
+            <result name="input">/WEB-INF/content/register.jsp</result>
+            <result name="error">/WEB-INF/content/error.jsp</result>
+        </action>
+    </package>
+</struts>
