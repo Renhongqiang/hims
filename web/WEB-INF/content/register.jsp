@@ -39,9 +39,14 @@
         ._citys1 a:hover { color: #fff; background-color: #eb0000; }
         .AreaS { background-color: #cfcfcf !important; color: #fff !important; }
     </style>
-
+    <style>
+        .errorMessage {
+            color: red;
+        }
+    </style>
 </head>
 <body>
+    <s:actionmessage></s:actionmessage>
     <h3 style="margin-left:auto; margin-right:auto; width:300px;">请输入注册信息：</h3>
     <hr>
     <s:form action="register" validate="true" theme="xhtml" style="margin-left:auto; margin-right:auto; width:300px;">
@@ -56,13 +61,10 @@
         <s:textfield name="user.work" label="职　　称"></s:textfield>
         <s:textfield name="user.phone" label="电　　话"></s:textfield>
         <s:textfield name="user.email" label="邮　　箱"></s:textfield>
-
         <s:textfield name="user.place" label="家庭住址" class="input" id="city" placeholder="请选择" autocomplete="off" readonly="true"></s:textfield>
-
         <s:submit value="注册" ></s:submit>
     </s:form>
     <a href="/index.jsp" style="margin-left:auto; margin-right:auto; width:300px; display: block;">登录</a>
-
 
     <%--<div class="wrap"><input class="input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"><s></s></div>--%>
 
@@ -74,6 +76,7 @@
             SelCity(document.getElementById("city"),e);
         });
 
+        //为家庭住址 input 动态添加父 div 节点，设置class="wrap"
         var city = document.querySelector("#city");
         var city_div = document.createElement("div");
         var city_father = city.parentNode;
