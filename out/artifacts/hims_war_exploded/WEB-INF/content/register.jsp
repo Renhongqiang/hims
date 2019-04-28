@@ -54,7 +54,7 @@
         <s:password name="user.password" label="密　码　"></s:password>
         <s:password name="repassword" label="确认密码"></s:password>
         <s:textfield name="user.name" label="真实姓名"></s:textfield>
-        <s:radio list="#{'m':'男','f':'女'}" name="user.sex" value="1" label="性　　别"/>
+        <s:radio list="#{'m':'男','f':'女'}" name="user.sex" value="m" label="性　　别"/>
         <s:textfield name="user.birth" label="生　　日" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd'})"></s:textfield>
         <s:textfield name="user.nation" label="民　　族"></s:textfield>
         <s:textfield name="user.edu" label="学　　历"></s:textfield>
@@ -66,7 +66,6 @@
     </s:form>
     <a href="/index.jsp" style="margin-left:auto; margin-right:auto; width:300px; display: block;">登录</a>
 
-    <s:debug></s:debug>
     <%--<div class="wrap"><input class="input" name="" id="city" type="text" placeholder="请选择" autocomplete="off" readonly="true"><s></s></div>--%>
 
     <script type="text/javascript">

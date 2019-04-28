@@ -28,6 +28,5 @@
       <s:submit value="登录" ></s:submit>
     </s:form>
     <a href="/register_page" style="margin-left:auto; margin-right:auto; width:300px; display: block;">没有账号?去注册</a>
-  <s:debug></s:debug>
   </body>
 </html>

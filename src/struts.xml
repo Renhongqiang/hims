@@ -22,11 +22,43 @@
         </action>
     </package>
 
+    <!-- 视图命名空间 -->
+    <package name="page" namespace="/" extends="struts-default">
+        <action name="welcome">
+            <result>/WEB-INF/content/welcome.jsp</result>
+        </action>
+        <action name="look_info" class="com.hims.action.user.UserAction" method="lookInfo">
+            <result name="success">/WEB-INF/content/user-info/look_info.jsp</result>
+            <result name="error">/WEB-INF/content/user-info/look_info.jsp</result>
+        </action>
+        <!--个人信息修改页面-->
+        <action name="change_info" class="com.hims.action.user.UserAction" method="lookInfo">
+            <result name="success">/WEB-INF/content/user-info/change_info.jsp</result>
+            <result name="error">/WEB-INF/content/user-info/change_info.jsp</result>
+        </action>
+        <!--修改个人信息请求-->
+        <action name="change_info_do" class="com.hims.action.user.UserAction" method="changeInfo">
+            <result name="success">/WEB-INF/content/user-info/change_info.jsp</result>
+            <result name="input">/WEB-INF/content/user-info/change_info.jsp</result>
+            <result name="error">/WEB-INF/content/user-info/change_info.jsp</result>
+        </action>
+        <!--修改密码页面-->
+        <action name="change_password">
+            <result>/WEB-INF/content/user-info/change_password.jsp</result>
+        </action>
+        <!--修改密码请求-->
+        <action name="change_password_do" class="com.hims.action.user.ChangePassAction" method="changePassWord">
+            <result name="success">/index.jsp</result>
+            <result name="input">/WEB-INF/content/user-info/change_password.jsp</result>
+            <result name="error">/WEB-INF/content/user-info/change_password.jsp</result>
+        </action>
+    </package>
+
     <package name="hims" namespace="/" extends="struts-default">
         <action name="login" class="com.hims.action.LoginAction">
             <result name="success">/WEB-INF/content/main.jsp</result>
             <result name="input">/index.jsp</result>
-            <result name="error">/WEB-INF/content/index.jsp</result>
+            <result name="error">/index.jsp</result>
         </action>
         <action name="register" class="com.hims.action.RegisterAction">
             <result name="success">/index.jsp</result>
@@ -34,4 +66,5 @@
             <result name="error">/WEB-INF/content/register.jsp</result>
         </action>
     </package>
+
 </struts>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <!--修改个人信息页面-->
+    <!-- 邮箱 校验  -->
+    <field name="user.email">
+        <field-validator type="email">
+            <param name="trim">true</param>
+            <message>邮箱格式不正确</message>
+        </field-validator>
+    </field>
+</validators>
