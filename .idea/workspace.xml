@@ -7,43 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87c05c31-4f96-4358-97c0-c2629ac0e790" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/mini.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/action/user/ChangePassAction-validation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/action/user/ChangePassAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/action/user/UserAction-validation.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/action/user/UserAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/util/Md5Util.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/friends/add_friends.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/friends/change_friends.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/friends/delete_friends.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/friends/look_friends.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/user-info/change_info.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/user-info/change_password.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/user-info/look_info.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/WEB-INF/content/welcome.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/nav.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font/iconfont.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/font/iconfont1.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/nav.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/img/arrow.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/LoginAction.class" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/RegisterAction.class" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/RegisterAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hims/com/hims/action/LoginAction.class" afterPath="$PROJECT_DIR$/out/production/hims/com/hims/action/LoginAction.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hims/com/hims/action/RegisterAction.class" afterPath="$PROJECT_DIR$/out/production/hims/com/hims/action/RegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/struts.xml" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/main.jsp" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hims/struts.xml" afterPath="$PROJECT_DIR$/out/production/hims/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hims/action/LoginAction.java" afterPath="$PROJECT_DIR$/src/com/hims/action/LoginAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hims/action/RegisterAction.java" afterPath="$PROJECT_DIR$/src/com/hims/action/RegisterAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/content/main.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/content/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/content/register.jsp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/img/arrow.png" afterPath="$PROJECT_DIR$/web/images/arrow.png" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -626,7 +590,7 @@
       <workItem from="1556425258438" duration="3220000" />
       <workItem from="1556431434757" duration="78000" />
       <workItem from="1556442890434" duration="6628000" />
-      <workItem from="1556453410575" duration="9623000" />
+      <workItem from="1556453410575" duration="9681000" />
     </task>
     <task id="LOCAL-00001" summary="register 校验注册&#10;注册名在index视图用户名input中显示">
       <created>1556428955274</created>
@@ -639,7 +603,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84423000" />
+    <option name="totallyTimeSpent" value="84481000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -663,12 +627,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47096774" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239032" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
