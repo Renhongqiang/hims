@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="87c05c31-4f96-4358-97c0-c2629ac0e790" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/hims/action/RegisterAction-validation.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/RegisterAction.class" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/classes/com/hims/action/RegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hims/com/hims/action/RegisterAction.class" afterPath="$PROJECT_DIR$/out/production/hims/com/hims/action/RegisterAction.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -16,10 +14,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/register.jsp" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/WEB-INF/content/register.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/hims_war_exploded/index.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/hims/struts.xml" afterPath="$PROJECT_DIR$/out/production/hims/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hims/action/RegisterAction.java" afterPath="$PROJECT_DIR$/src/com/hims/action/RegisterAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/content/register.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/content/register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -607,12 +601,20 @@
       <workItem from="1556369383889" duration="5931000" />
       <workItem from="1556412269971" duration="3142000" />
       <workItem from="1556421566340" duration="1911000" />
-      <workItem from="1556425258438" duration="3046000" />
+      <workItem from="1556425258438" duration="3161000" />
     </task>
+    <task id="LOCAL-00001" summary="register 校验注册&#10;注册名在index视图用户名input中显示">
+      <created>1556428955274</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556428955275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67920000" />
+    <option name="totallyTimeSpent" value="68035000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -638,7 +640,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43225807" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -664,6 +666,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="register 校验注册&#10;注册名在index视图用户名input中显示" />
+    <option name="LAST_COMMIT_MESSAGE" value="register 校验注册&#10;注册名在index视图用户名input中显示" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
