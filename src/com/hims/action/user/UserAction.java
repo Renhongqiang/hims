@@ -3,7 +3,6 @@ package com.hims.action.user;
 import com.hims.bean.User;
 import com.hims.dao.UserDao;
 import com.hims.dao.impl.UserDaoImpl;
-import com.hims.util.Md5Util;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;

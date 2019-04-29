@@ -27,6 +27,7 @@
         <action name="welcome">
             <result>/WEB-INF/content/welcome.jsp</result>
         </action>
+        <!--个人信息模块-->
         <!-- 个人信息查看页面 + 个人信息修改页面 {1} = look / change-->
         <action name="*_info" class="com.hims.action.user.UserAction" method="lookInfo">
             <result name="success">/WEB-INF/content/user-info/{1}_info.jsp</result>
@@ -48,8 +49,43 @@
             <result name="input">/WEB-INF/content/user-info/change_password.jsp</result>
             <result name="error">/WEB-INF/content/user-info/change_password.jsp</result>
         </action>
+
+        <!--联系人模块-->
+        <!--查看联系人-->
+        <action name="look_friend" class="com.hims.action.fridens.FriendsAction" method="lookFriends">
+            <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
+        </action>
+        <action name="find_friend" class="com.hims.action.fridens.FriendsAction" method="findFriends">
+            <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
+        </action>
+        <!--添加联系人页面-->
+        <action name="add_friend">
+            <result>/WEB-INF/content/friends/add_friends.jsp</result>
+        </action>
+        <!--添加联系人请求-->
+        <action name="add_friend_do" class="com.hims.action.fridens.ExecuteFriendsAction" method="addFriends">
+            <result name="success">/WEB-INF/content/friends/add_friends.jsp</result>
+            <result name="input">/WEB-INF/content/friends/add_friends.jsp</result>
+            <result name="error">/WEB-INF/content/friends/add_friends.jsp</result>
+        </action>
+        <!--修改联系人-->
+        <action name="change_friend" class="com.hims.action.fridens.FriendsAction" method="changeFriendsPage">
+            <result name="success">/WEB-INF/content/friends/change_friends.jsp</result>
+        </action>
+        <!--修改联系人请求-->
+        <action name="change_friend_do" class="com.hims.action.fridens.ExecuteFriendsAction" method="changeFriends">
+            <result name="success">/WEB-INF/content/friends/change_friends.jsp</result>
+            <result name="input">/WEB-INF/content/friends/change_friends.jsp</result>
+            <result name="error">/WEB-INF/content/friends/change_friends.jsp</result>
+        </action>
+        <!--删除联系人-->
+        <action name="delete_friend" class="com.hims.action.fridens.FriendsAction" method="deleteFriends">
+            <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
+            <result name="error">/WEB-INF/content/friends/look_friends.jsp</result>
+        </action>
     </package>
 
+    <!--登录注册-->
     <package name="hims" namespace="/" extends="struts-default">
         <action name="login" class="com.hims.action.LoginAction">
             <result name="success">/WEB-INF/content/main.jsp</result>

@@ -39,10 +39,8 @@
                 <li class="nav-item">
                     <a href="javascript:;"><i class="iconfont icon-renyuan"></i><span>通讯录管理</span><i class="my-icon nav-more"></i></a>
                     <ul>
-                        <li><a href="javascript:;" target= "iFrame1"><span>查看通讯录</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>添加联系人</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>修改联系人</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>删除联系人</span></a></li>
+                        <li><a href="look_friend" target= "iFrame1"><span>查看通讯录</span></a></li>
+                        <li><a href="add_friend" target= "iFrame1"><span>添加联系人</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

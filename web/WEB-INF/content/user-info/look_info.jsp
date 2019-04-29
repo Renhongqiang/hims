@@ -29,6 +29,5 @@
         <span>邮箱：<s:property value="#request.user.email" /></span><br><br>
         <span>住址：<s:property value="#request.user.place" /></span><br><br>
     </div>
-<s:debug></s:debug>
 </body>
 </html>

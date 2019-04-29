@@ -73,4 +73,9 @@ public class Friends {
   public void setQq(String qq) {
     this.qq = qq;
   }
+
+  @Override
+  public String toString() {
+    return name + phone + email + qq + workplace + place;
+  }
 }

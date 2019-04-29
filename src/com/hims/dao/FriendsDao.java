@@ -15,6 +15,7 @@ public interface FriendsDao {
 
     /**
      * 改
+     * id 不能为空
      * @param friend
      * @return n or 0
      */
@@ -29,16 +30,17 @@ public interface FriendsDao {
 
     /**
      * 查1
-     * 根据联系人名查询联系人信息
-     * @param name
+     * 根据friends中第一个非空属性查询
+     * @param friends
      * @return friend
      */
-    public Friends getFriends(String name);
+    public Friends getFriends(Friends friends);
 
     /**
      * 查2
-     * 查询全部联系人信息
+     * 查询 username 全部联系人信息
+     * @param username
      * @return List<Friends> 包含全部联系人
      */
-    public List<Friends> getFriendsList();
+    public List<Friends> getFriendsList(String username);
 }

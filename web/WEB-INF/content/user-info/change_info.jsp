@@ -23,7 +23,7 @@
         html { -webkit-text-size-adjust: none; text-size-adjust: none; }
         html, body {height:99%;width:99%; }
         .wrap{border:0;position:relative;margin-top: -10px;}
-        .input{position:absolute;top:0;left:0;margin:0;padding-left:0px;width: 174;height:22px;line-height:22px;font-size:12px;border:1px
+        .input{position:absolute;top:0;left:0;margin:0;padding-left:0px;width: 157;height:22px;line-height:22px;font-size:12px;border:1px
         solid #c9cacb;}
         s{position:absolute;top:0px;left:172px;width:24px;height:24px;background:url("img/arrow.png") no-repeat;
             background-size: cover;}
