@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>注册</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
     <script type="text/javascript" src="/js/WdatePicker.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/Popt.js"></script>
@@ -38,11 +40,6 @@
             overflow: hidden; }
         ._citys1 a:hover { color: #fff; background-color: #eb0000; }
         .AreaS { background-color: #cfcfcf !important; color: #fff !important; }
-    </style>
-    <style>
-        .errorMessage {
-            color: red;
-        }
     </style>
 </head>
 <body>

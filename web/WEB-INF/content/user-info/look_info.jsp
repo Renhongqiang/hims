@@ -10,17 +10,11 @@
 <html>
 <head>
     <title>查看信息</title>
-    <style>
-        span {
-            float: left;
-            font-size: 16px;
-            color: #4d4d4d;
-            font-family: 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
 </head>
 <body>
-    <h1 style="margin-left: auto;margin-right: auto; width: 400px;">个人信息管理系统</h1><hr>
+    <h1 class="title">个人信息管理系统</h1><hr>
     <h4>用户 <s:property value="#session.username"></s:property> 的个人信息：</h4>
     <br>
     <div style="margin-left: 150px">
@@ -35,5 +29,6 @@
         <span>邮箱：<s:property value="#request.user.email" /></span><br><br>
         <span>住址：<s:property value="#request.user.place" /></span><br><br>
     </div>
+<s:debug></s:debug>
 </body>
 </html>

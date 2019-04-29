@@ -11,11 +11,7 @@
   <head>
     <title>登录</title>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <style>
-      .errorMessage {
-        color: red;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
   </head>
   <body>
     <s:actionmessage></s:actionmessage>

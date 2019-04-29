@@ -72,5 +72,4 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
     public void setUser(User user) {
         this.user = user;
     }
-
 }

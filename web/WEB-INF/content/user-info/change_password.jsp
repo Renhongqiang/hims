@@ -10,14 +10,10 @@
 <html>
 <head>
     <title>修改密码</title>
-    <style>
-        .errorMessage {
-            color: red;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-    <h1 style="margin-left: auto;margin-right: auto; width: 400px;">个人信息管理系统</h1><hr>
+    <h1 class="title">个人信息管理系统</h1><hr>
     <s:actionmessage></s:actionmessage>
     <h4>修改用户 <s:property value="#session.username"></s:property> 的密码：</h4>
     <s:form action="change_password_do" validate="true" theme="xhtml" style="margin-left:auto; margin-right:auto; width:300px;">

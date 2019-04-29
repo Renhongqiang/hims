@@ -1,0 +1,15 @@
+.h1, .h2, .h3, .h4, .h5, .h6, a, abbr, body, cite, dd, dl, dt, h1, h2, h3, h4, h5, h6, iframe, input, li, object, ol, p, pre, span, ul {
+    font-family: 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;
+}
+span {
+    float: left;
+    font-size: 16px;
+    color: #4d4d4d;
+    font-family: 'Microsoft YaHei','SF Pro Display',Roboto,Noto,Arial,'PingFang SC',sans-serif;
+}
+.title {
+    margin-left: auto;margin-right: auto; width:400px; color: #3d3d3d;
+}
+.errorMessage {
+    color: red;
+}

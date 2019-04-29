@@ -10,6 +10,8 @@
 <html>
 <head>
     <title>修改信息</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+
     <script type="text/javascript" src="/js/WdatePicker.js"></script>
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/Popt.js"></script>
@@ -41,7 +43,7 @@
     </style>
 </head>
 <body>
-    <h1 style="margin-left: auto;margin-right: auto; width: 400px;">个人信息管理系统</h1><hr>
+    <h1 class="title">个人信息管理系统</h1><hr>
     <s:actionmessage></s:actionmessage>
     <h4>修改用户 <s:property value="#session.username"></s:property> 的个人信息：</h4>
     <s:form action="change_info_do" validate="true" theme="xhtml" style="margin-left:auto; margin-right:auto; width:300px;">

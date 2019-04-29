@@ -11,9 +11,10 @@
 <html>
 <head>
     <title>欢迎</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-    <h1 style="margin-left: auto;margin-right: auto; width:400px;">欢迎登陆个人信息管理系统</h1>
+    <h1 class="title">欢迎登陆个人信息管理系统</h1>
     <hr><br>
     当前用户：<s:property value="#session.username"></s:property>
     <br>

@@ -27,14 +27,10 @@
         <action name="welcome">
             <result>/WEB-INF/content/welcome.jsp</result>
         </action>
-        <action name="look_info" class="com.hims.action.user.UserAction" method="lookInfo">
-            <result name="success">/WEB-INF/content/user-info/look_info.jsp</result>
-            <result name="error">/WEB-INF/content/user-info/look_info.jsp</result>
-        </action>
-        <!--个人信息修改页面-->
-        <action name="change_info" class="com.hims.action.user.UserAction" method="lookInfo">
-            <result name="success">/WEB-INF/content/user-info/change_info.jsp</result>
-            <result name="error">/WEB-INF/content/user-info/change_info.jsp</result>
+        <!-- 个人信息查看页面 + 个人信息修改页面 {1} = look / change-->
+        <action name="*_info" class="com.hims.action.user.UserAction" method="lookInfo">
+            <result name="success">/WEB-INF/content/user-info/{1}_info.jsp</result>
+            <result name="error">/WEB-INF/content/user-info/{1}_info.jsp</result>
         </action>
         <!--修改个人信息请求-->
         <action name="change_info_do" class="com.hims.action.user.UserAction" method="changeInfo">
@@ -54,6 +50,7 @@
         </action>
     </package>
 
+    <!--登录注册-->
     <package name="hims" namespace="/" extends="struts-default">
         <action name="login" class="com.hims.action.LoginAction">
             <result name="success">/WEB-INF/content/main.jsp</result>
