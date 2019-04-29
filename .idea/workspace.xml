@@ -583,7 +583,7 @@
       <workItem from="1556431434757" duration="78000" />
       <workItem from="1556442890434" duration="6628000" />
       <workItem from="1556453410575" duration="9681000" />
-      <workItem from="1556503491676" duration="3720000" />
+      <workItem from="1556503491676" duration="4217000" />
     </task>
     <task id="LOCAL-00001" summary="register 校验注册&#10;注册名在index视图用户名input中显示">
       <created>1556428955274</created>
@@ -596,7 +596,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88265000" />
+    <option name="totallyTimeSpent" value="88762000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
