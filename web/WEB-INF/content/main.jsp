@@ -46,9 +46,8 @@
                 <li class="nav-item">
                     <a href="javascript:;"><i class="iconfont icon-changyonggoupiaorenbianji"></i><span>日程管理</span><i class="my-icon nav-more"></i></a>
                     <ul>
-                        <li><a href="javascript:;" target= "iFrame1"><span>查看日程</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>增加日程</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>修改和删除</span></a></li>
+                        <li><a href="look_date" target= "iFrame1"><span>查看日程</span></a></li>
+                        <li><a href="add_date" target= "iFrame1"><span>增加日程</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-item">

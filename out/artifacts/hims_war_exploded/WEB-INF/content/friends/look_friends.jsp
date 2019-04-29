@@ -21,7 +21,7 @@
             <s:submit value="显示全部"></s:submit>
             <s:textfield name="friends.name" value="" style="display:none;"></s:textfield>
         </s:form>　　
-        <s:form action="find_friend" theme="simple" style="display: inline; float: right;">
+        <s:form action="find_friend" theme="simple" style="display: inline; float: right; margin-right:10px;">
             <s:submit value="查找"></s:submit>
             <s:textfield name="friends.name"></s:textfield>
         </s:form>

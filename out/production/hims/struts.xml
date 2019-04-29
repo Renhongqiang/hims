@@ -55,6 +55,7 @@
         <action name="look_friend" class="com.hims.action.fridens.FriendsAction" method="lookFriends">
             <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
         </action>
+        <!--查找联系人请求-->
         <action name="find_friend" class="com.hims.action.fridens.FriendsAction" method="findFriends">
             <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
         </action>
@@ -80,8 +81,39 @@
         </action>
         <!--删除联系人-->
         <action name="delete_friend" class="com.hims.action.fridens.FriendsAction" method="deleteFriends">
-            <result name="success">/WEB-INF/content/friends/look_friends.jsp</result>
+            <result name="success" type="redirectAction">look_friend</result>
             <result name="error">/WEB-INF/content/friends/look_friends.jsp</result>
+        </action>
+
+        <!--日程模块-->
+        <!--查看日程-->
+        <action name="look_date" class="com.hims.action.date.DateAction" method="lookDate">
+            <result name="success">/WEB-INF/content/date/look_date.jsp</result>
+        </action>
+        <!--添加日程页面-->
+        <action name="add_date">
+            <result>/WEB-INF/content/date/add_date.jsp</result>
+        </action>
+        <!--添加日程请求-->
+        <action name="add_date_do" class="com.hims.action.date.DateAction" method="addDate">
+            <result name="success">/WEB-INF/content/date/add_date.jsp</result>
+            <result name="input">/WEB-INF/content/date/add_date.jsp</result>
+            <result name="error">/WEB-INF/content/date/add_date.jsp</result>
+        </action>
+        <!--修改联系人-->
+        <action name="change_date" class="com.hims.action.date.DateAction" method="changeDatePage">
+            <result name="success">/WEB-INF/content/date/change_date.jsp</result>
+        </action>
+        <!--修改联系人请求-->
+        <action name="change_date_do" class="com.hims.action.date.DateAction" method="changeDate">
+            <result name="success">/WEB-INF/content/date/change_date.jsp</result>
+            <result name="input">/WEB-INF/content/date/change_date.jsp</result>
+            <result name="error">/WEB-INF/content/date/change_date.jsp</result>
+        </action>
+        <!--删除日程请求-->
+        <action name="delete_date" class="com.hims.action.date.DateAction" method="deleteDate">
+            <result name="success" type="redirectAction">look_date</result>
+            <result name="error">/WEB-INF/content/date/look_date.jsp</result>
         </action>
     </package>
 

@@ -11,7 +11,6 @@
 <head>
     <title>查看信息</title>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-
 </head>
 <body>
     <h1 class="title">个人信息管理系统</h1><hr>
