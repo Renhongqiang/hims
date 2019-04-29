@@ -19,8 +19,7 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String lookInfo() throws Exception {
             User resultUser = new User();
-            String username = (String) session.get("username");
-            resultUser.setUsername(username);
+            resultUser.setId((int)session.get("id"));
             resultUser = userDao.getUser(resultUser);
             request.put("user", resultUser);
             return SUCCESS;
@@ -42,6 +41,11 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
         }
     }
 
+
+    private Map<String, Object> session;
+    private Map<String, Object> request;
+    private UserDao userDao = new UserDaoImpl();
+    private User user;
 
     public Map<String, Object> getSession() {
         return session;
@@ -69,8 +73,4 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
         this.user = user;
     }
 
-    private Map<String, Object> session;
-    private Map<String, Object> request;
-    private UserDao userDao = new UserDaoImpl();
-    private User user;
 }

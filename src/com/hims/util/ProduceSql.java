@@ -6,6 +6,7 @@ import cn.hutool.core.util.StrUtil;
 import java.lang.reflect.Field;
 
 public class ProduceSql {
+    //例：
     //String insertSql = getInsertSql("user", User.class, user);
 
     /**

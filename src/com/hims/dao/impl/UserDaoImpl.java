@@ -59,7 +59,7 @@ public class UserDaoImpl implements UserDao {
 
     /**
      * 查1
-     * 根据用户名查询用户信息
+     * 根据user中第一个非空属性查询用户信息
      * @param user
      * @return User
      */

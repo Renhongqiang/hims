@@ -45,7 +45,7 @@ public class ResultSetToBean {
 
     /**
      * 根据属性名获取get方法
-     * @param objectClass
+     * @param objectClass class name
      * @param fieldName 属性名
      * @return
      */
@@ -69,7 +69,7 @@ public class ResultSetToBean {
 
     /**
      * 获取所有属性
-     * @param objectClass
+     * @param objectClass class name
      * @return Field[]
      */
     private static Field[] getAllFieldName(Class objectClass) {
@@ -82,7 +82,7 @@ public class ResultSetToBean {
 
     /**
      * 根据属性名执行相应set方法
-     * @param o 执行对象
+     * @param o 调用对象
      * @param fieldName 属性名
      * @param value 属性值
      */

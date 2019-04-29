@@ -19,22 +19,22 @@ public class ChangePassAction extends ActionSupport implements SessionAware, Req
     public String changePassWord() throws Exception {
         User resultUser = new User();
         resultUser.setUsername((String) session.get("username"));
-            //用提交密码的md5值
-            String oldpasswordMd5 = Md5Util.getMD5Str(oldpassword);
-            //数据库中旧密码
-            String userpasswordMd5 = userDao.getUser(resultUser).getPassword();
-            if (oldpasswordMd5.equals(userpasswordMd5)) {
-                    resultUser.setUsername((String) session.get("username"));
-                    resultUser.setPassword(Md5Util.getMD5Str(newpassword));
-                    resultUser.setId((int)session.get("id"));
-                    userDao.updateUser(resultUser);
-                    session.remove("username");
-                    addActionMessage("密码已修改，请重新登录!");
-                    return SUCCESS;
-            } else {
-                addActionMessage("旧密码错误!");
-                return ERROR;
-            }
+        //用户提交的旧密码密码的md5值
+        String oldpasswordMd5 = Md5Util.getMD5Str(oldpassword);
+        //数据库中旧密码
+        String userpasswordMd5 = userDao.getUser(resultUser).getPassword();
+        //用户提交的旧密码正确
+        if (oldpasswordMd5.equals(userpasswordMd5)) {
+            resultUser.setPassword(Md5Util.getMD5Str(newpassword));
+            resultUser.setId((int)session.get("id"));
+            userDao.updateUser(resultUser);
+            session.remove("username");
+            addActionMessage("密码已修改，请重新登录!");
+            return SUCCESS;
+        } else {
+            addActionMessage("旧密码错误!");
+            return ERROR;
+        }
     }
 
     private Map<String, Object> session;

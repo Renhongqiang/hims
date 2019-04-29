@@ -5,7 +5,7 @@ import java.security.MessageDigest;
 
 public class Md5Util {
     /**
-     * 对字符串md5加密
+     * 获取字符串md5值
      *
      * @param str
      * @return
@@ -27,6 +27,5 @@ public class Md5Util {
         } finally {
             return md5;
         }
-
     }
 }
