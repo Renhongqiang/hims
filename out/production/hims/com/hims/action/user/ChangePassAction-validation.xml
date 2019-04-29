@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <!--修改密码页面-->
+    <!-- password 校验  -->
+    <field name="oldpassword">
+        <field-validator type="requiredstring" short-circuit="true">
+            <param name="trim">true</param>
+            <message>必须输入旧密码</message>
+        </field-validator>
+        <field-validator type="regex">
+            <param name="regex"><![CDATA[(\w{4,25})]]></param>
+            <message>密码必须是4-25个字符的数字字母组合</message>
+        </field-validator>
+    </field>
+    <!-- password 校验  -->
+    <field name="newpassword">
+        <field-validator type="requiredstring" short-circuit="true">
+            <param name="trim">true</param>
+            <message>必须输入新密码</message>
+        </field-validator>
+        <field-validator type="regex">
+            <param name="regex"><![CDATA[(\w{4,25})]]></param>
+            <message>密码必须是4-25个字符的数字字母组合</message>
+        </field-validator>
+    </field>
+    <!--repassword 校验-->
+    <field name="repassword">
+        <field-validator type="requiredstring" short-circuit="true">
+            <param name="trim">true</param>
+            <message>必须输入两次相同的密码以确保正确</message>
+        </field-validator>
+        <field-validator type="fieldexpression">
+            <param name="expression"><![CDATA[(newpassword==repassword)]]></param>
+            <message>两次密码不同</message>
+        </field-validator>
+    </field>
+</validators>
