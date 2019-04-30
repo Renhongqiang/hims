@@ -56,14 +56,12 @@
                         <i class="my-icon nav-more"></i>
                     </a>
                     <ul>
-                        <li><a href="javascript:;" target= "iFrame1"><span>查看文件</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>目录操作</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>上传下载</span></a></li>
-                        <li><a href="javascript:;" target= "iFrame1"><span>修改信息</span></a></li>
+                        <li><a href="look_files" target= "iFrame1"><span>查看文件</span></a></li>
+                        <li><a href="upload_file" target= "iFrame1"><span>上传文件</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a href="#"><span>退出登录</span>&nbsp;<i class="iconfont icon-tuichu1"></i></a>
+                    <a href="singout"><span>退出登录</span>&nbsp;<i class="iconfont icon-tuichu1"></i></a>
                 </li>
             </ul>
         </div>

@@ -10,7 +10,7 @@ import org.apache.struts2.interceptor.SessionAware;
 import java.util.Map;
 
 public class LoginAction extends ActionSupport implements SessionAware {
-    public String execute() throws Exception {
+    public String login() throws Exception {
         UserDao userDao = new UserDaoImpl();
         if(userDao.getUser(user) != null)
         {
@@ -27,6 +27,11 @@ public class LoginAction extends ActionSupport implements SessionAware {
             addActionMessage("该用户未注册！");
             return ERROR;
         }
+    }
+
+    public String singOut() throws Exception{
+        session.remove("username");
+        return SUCCESS;
     }
 
     public User getUser() {

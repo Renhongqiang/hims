@@ -5,6 +5,7 @@
         "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+    <constant name="struts.i18n.encoding" value="UTF-8"></constant>
     <constant name="struts.devMode" value="true"></constant>
     <constant name="struts.action.extension" value=","/>
     <!-- 默认命名空间 -->
@@ -22,7 +23,7 @@
         </action>
     </package>
 
-    <!-- 视图命名空间 -->
+    <!-- 视图、请求命名空间 -->
     <package name="page" namespace="/" extends="struts-default">
         <action name="welcome">
             <result>/WEB-INF/content/welcome.jsp</result>
@@ -115,12 +116,68 @@
             <result name="success" type="redirectAction">look_date</result>
             <result name="error">/WEB-INF/content/date/look_date.jsp</result>
         </action>
+
+        <!--文件上传模块-->
+        <!--上传文件页面-->
+        <action name="upload_file">
+            <result>/WEB-INF/content/file/upload_file.jsp</result>
+        </action>
+        <!--查看文件-->
+        <action name="look_files" class="com.hims.action.file.FileAction" method="lookFiles">
+            <result name="success">/WEB-INF/content/file/look_file.jsp</result>
+        </action>
+        <!--删除文件-->
+        <action name="delete_file" class="com.hims.action.file.FileAction" method="deleteFile">
+            <result name="success">/WEB-INF/content/file/look_file.jsp</result>
+            <result name="error">/WEB-INF/content/file/look_file.jsp</result>
+        </action>
+        <!--文件上传-->
+        <action name="upload_file_do" class="com.hims.action.file.FileAction" method="uploadFile">
+            <!--配置 fileUpload 拦截器-->
+            <interceptor-ref name="fileUpload">
+                <!--允许上传的文件类型-->
+                <param name="allowedTypes">image/png,image/jpg,image/gif,image/jpeg,image/bmp,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/octet-stream</param>
+                <!--允许上传的文件大小 100M = 104857600Bytes-->
+                <param name="maximumSize">104857600</param>
+            </interceptor-ref>
+            <!--必须配置默认拦截器-->
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="success">/WEB-INF/content/file/upload_file.jsp</result>
+            <result name="input">/WEB-INF/content/file/upload_file.jsp</result>
+            <!--文件上传路径-->
+            <param name="savePath">/uploadFiles</param>
+        </action>
+        <!--文件下载-->
+        <action name="download_file" class="com.hims.action.file.FileAction" method="downloadFile">
+            <!-- 指定被下载资源的位置 -->
+            <!-- <param name="inputPath">/Html/imgs/2.jpg</param> -->
+
+            <!-- 配置结果类型为stream的结果 -->
+            <result name="success" type="stream">
+                <!-- 动态文件下载的，事先并不知道未来的文件类型，那么我们可以把它的值设置成为：application/octet- stream;charset=ISO8859-1 ，注意一定要加入charset，否则某些时候会导致下载的文件出错； -->
+                <!-- contentType 指定下载文件的文件类型 ——application/octet-stream 表示无限制 -->
+                <param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+                <!-- inputName 流对象名 ——比如这里写inputStream，它就会自动去找Action中的getInputStream方法。  -->
+                <param name="inputName">inputStream</param>
+                <!-- attachment;filename="struts2.txt"，表示文件下载的时候保存的名字应为struts2.txt。如果直接写filename="struts2.txt"，那么默认情况是代表inline，浏览器会尝试自动打开它，等价于这样的写法：inline; filename="struts2.txt" -->
+                <!-- contentDisposition 使用经过转码的文件名作为下载文件名 ——默认格式是attachment;filename="${fileName}"，将调用该Action中的getFileName方法。  -->
+                <param name="contentDisposition">attachment;filename="${file.name}"</param>
+                <!-- 指定下载文件的缓冲大小 -->
+                <param name="bufferSize">50000000</param>
+            </result>
+            <result name="error" type="redirectAction">look_files</result>
+        </action>
     </package>
 
     <!--登录注册-->
     <package name="hims" namespace="/" extends="struts-default">
-        <action name="login" class="com.hims.action.LoginAction">
+        <action name="login" class="com.hims.action.LoginAction" method="login">
             <result name="success">/WEB-INF/content/main.jsp</result>
+            <result name="input">/index.jsp</result>
+            <result name="error">/index.jsp</result>
+        </action>
+        <action name="singout" class="com.hims.action.LoginAction" method="singOut">
+            <result name="success">/index.jsp</result>
             <result name="input">/index.jsp</result>
             <result name="error">/index.jsp</result>
         </action>

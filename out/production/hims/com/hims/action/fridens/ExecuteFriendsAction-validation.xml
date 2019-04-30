@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE validators PUBLIC
+        "-//Apache Struts//XWork validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+    <!-- friends.name 非空校验  -->
+    <field name="friends.name">
+        <field-validator type="requiredstring" short-circuit="true">
+            <param name="trim">true</param>
+            <message>必须输入联系人姓名</message>
+        </field-validator>
+    </field>
+    <!--邮箱校验-->
+    <field name="friends.email">
+        <field-validator type="email">
+            <param name="trim">true</param>
+            <message>邮箱格式不正确</message>
+        </field-validator>
+    </field>
+</validators>
