@@ -1,8 +1,8 @@
 package com.hims.action.date;
 
 import com.hims.bean.Date;
-import com.hims.dao.DateDao;
-import com.hims.dao.impl.DateDaoImpl;
+import com.hims.dao.BeanDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
@@ -19,7 +19,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String lookDate() throws Exception {
         String username = (String) session.get("username");
-        List<Date> dates = dateDao.getDataList(username);
+        List<Date> dates = (List<Date>) beanDao.getBeanList(username, Date.class);
         if (dates.size() == 0) {
             addActionMessage("您还没有日程!");
         }
@@ -34,7 +34,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String deleteDate() throws Exception {
         if (date.getId() != 0) {
-            dateDao.deleteData(date);
+            beanDao.deleteBean(date);
             addActionMessage("删除成功!");
             return SUCCESS;
         } else {
@@ -51,7 +51,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
     public String addDate() throws Exception {
         if (date.getThing() != null) {
             date.setUsername((String) session.get("username"));
-            dateDao.insertData(date);
+            beanDao.insertBean(date);
             addActionMessage("添加成功!");
         } else {
             addActionMessage("日程内容为空!");
@@ -66,7 +66,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String changeDate() throws Exception {
         if (date.getId() != 0) {
-            dateDao.updateData(date);
+            beanDao.updateBean(date);
             addActionMessage("修改成功!");
         } else {
             addActionMessage("修改失败!");
@@ -82,7 +82,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
     public String changeDatePage() throws Exception {
         Date result = new Date();
         if (date.getId() != 0) {
-            result= dateDao.getData(date);
+            result= (Date) beanDao.getBean(date);
             if(result != null) {
                 request.put("date", result);
             }
@@ -94,7 +94,7 @@ public class DateAction extends ActionSupport implements SessionAware, RequestAw
 
     private Map<String, Object> session;
     private Map<String, Object> request;
-    private DateDao dateDao = new DateDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
     private Date date;
 
     public Date getDate() {

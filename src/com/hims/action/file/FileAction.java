@@ -2,8 +2,8 @@ package com.hims.action.file;
 
 
 import com.hims.bean.File;
-import com.hims.dao.FileDao;
-import com.hims.dao.impl.FileDaoImpl;
+import com.hims.dao.BeanDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.hims.util.GetFileSize;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.ServletActionContext;
@@ -51,7 +51,7 @@ public class FileAction extends ActionSupport implements SessionAware, RequestAw
         //将 ‘\’ 替换为 '/'
         file.setFilepath(path.replace('\\', '/'));
         file.setSize(GetFileSize.getSizeString(upload.length()));  //Bytes
-        fileDao.insertFile(file);
+        beanDao.insertBean(file);
         addActionMessage("上传成功!");
         return SUCCESS;
     }
@@ -63,7 +63,7 @@ public class FileAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String lookFiles() throws Exception {
         String username = (String) session.get("username");
-        List<File> files = fileDao.getFileList(username);
+        List<File> files = (List<File>) beanDao.getBeanList(username, File.class);
         if (files.size() == 0) {
             addActionMessage("您还没有文件!");
         }
@@ -77,13 +77,14 @@ public class FileAction extends ActionSupport implements SessionAware, RequestAw
      * @throws Exception
      */
     public String deleteFile() throws Exception {
-        String path = fileDao.getFile(file).getFilepath();
-        String uname = fileDao.getFile(file).getUsername();
+        File thisFile = (File) beanDao.getBean(file);
+        String path = thisFile.getFilepath();
+        String uname = thisFile.getUsername();
         java.io.File deleteFile = new java.io.File(path);
         //id不为空且请求删除的是本用户的文件
         if (file.getId() != 0 && uname.equals(session.get("username"))) {
             if(deleteFile.delete()) {
-                fileDao.deleteFile(file);
+                beanDao.deleteBean(file);
                 addActionMessage("删除成功!");
                 return SUCCESS;
             }else {
@@ -117,8 +118,8 @@ public class FileAction extends ActionSupport implements SessionAware, RequestAw
      * @return
      */
     public String downloadFile(){
-        file = fileDao.getFile(file);
-        String uname = fileDao.getFile(file).getUsername();
+        file = (File) beanDao.getBean(file);
+        String uname = file.getUsername();
         if (!uname.equals(session.get("username"))) {
             addActionMessage("非法操作!");
             return ERROR;
@@ -179,7 +180,7 @@ public class FileAction extends ActionSupport implements SessionAware, RequestAw
 
     private Map<String, Object> session;
     private Map<String, Object> request;
-    private FileDao fileDao = new FileDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
     private File file;
 
     public File getFile() {

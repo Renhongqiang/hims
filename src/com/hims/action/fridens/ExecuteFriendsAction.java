@@ -1,8 +1,8 @@
 package com.hims.action.fridens;
 
 import com.hims.bean.Friends;
-import com.hims.dao.FriendsDao;
-import com.hims.dao.impl.FriendsDaoImpl;
+import com.hims.dao.BeanDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
@@ -19,7 +19,7 @@ public class ExecuteFriendsAction extends ActionSupport implements SessionAware,
     public String addFriends() throws Exception {
         if (friends.getName() != null) {
             friends.setUsername((String) session.get("username"));
-            friendsDao.insertFriend(friends);
+            beanDao.insertBean(friends);
             addActionMessage("添加成功!");
         } else {
             addActionMessage("联系人姓名为空!");
@@ -34,7 +34,7 @@ public class ExecuteFriendsAction extends ActionSupport implements SessionAware,
      */
     public String changeFriends() throws Exception {
         if (friends.getId() != 0) {
-            friendsDao.updateFriend(friends);
+            beanDao.updateBean(friends);
             addActionMessage("修改成功!");
         } else {
             addActionMessage("修改失败!");
@@ -45,7 +45,7 @@ public class ExecuteFriendsAction extends ActionSupport implements SessionAware,
     private Map<String, Object> session;
     private Map<String, Object> request;
     private Friends friends;
-    private FriendsDao friendsDao  = new FriendsDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
 
     public Friends getFriends() {
         return friends;

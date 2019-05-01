@@ -1,8 +1,8 @@
 package com.hims.action.fridens;
 
 import com.hims.bean.Friends;
-import com.hims.dao.FriendsDao;
-import com.hims.dao.impl.FriendsDaoImpl;
+import com.hims.dao.BeanDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
 import org.apache.struts2.interceptor.SessionAware;
@@ -20,7 +20,7 @@ public class FriendsAction extends ActionSupport implements SessionAware, Reques
      */
     public String lookFriends() throws Exception {
         String username = (String) session.get("username");
-        List<Friends> friendsList = friendsDao.getFriendsList(username);
+        List<Friends> friendsList = (List<Friends>) beanDao.getBeanList(username, Friends.class);
         if (friendsList.size() == 0) {
             addActionMessage("您还没有联系人!");
         }
@@ -36,7 +36,7 @@ public class FriendsAction extends ActionSupport implements SessionAware, Reques
      */
     public String findFriends() throws Exception {
         String username = (String) session.get("username");
-        List<Friends> friendsList = friendsDao.getFriendsList(username);
+        List<Friends> friendsList = (List<Friends>) beanDao.getBeanList(username, Friends.class);
         List<Friends> result = new ArrayList<Friends>();
         String name = friends.getName();
         if (name == "") {
@@ -63,7 +63,7 @@ public class FriendsAction extends ActionSupport implements SessionAware, Reques
      */
     public String deleteFriends() throws Exception {
         if (friends.getId() != 0) {
-            friendsDao.deleteUser(friends);
+            beanDao.deleteBean(friends);
             addActionMessage("删除成功!");
             return SUCCESS;
         } else {
@@ -80,7 +80,7 @@ public class FriendsAction extends ActionSupport implements SessionAware, Reques
     public String changeFriendsPage() throws Exception {
         Friends result = new Friends();
         if (friends.getId() != 0) {
-            result= friendsDao.getFriends(friends);
+            result= (Friends) beanDao.getBean(friends);
             if(result != null) {
                 request.put("friends", result);
             }
@@ -90,7 +90,7 @@ public class FriendsAction extends ActionSupport implements SessionAware, Reques
 
     private Map<String, Object> session;
     private Map<String, Object> request;
-    private FriendsDao friendsDao  = new FriendsDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
     private Friends friends;
 
     public Friends getFriends() {

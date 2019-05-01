@@ -1,7 +1,9 @@
 package com.hims.action.user;
 
 import com.hims.bean.User;
+import com.hims.dao.BeanDao;
 import com.hims.dao.UserDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.hims.dao.impl.UserDaoImpl;
 import com.hims.util.Md5Util;
 import com.opensymphony.xwork2.ActionSupport;
@@ -22,12 +24,12 @@ public class ChangePassAction extends ActionSupport implements SessionAware, Req
         //用户提交的旧密码密码的md5值
         String oldpasswordMd5 = Md5Util.getMD5Str(oldpassword);
         //数据库中旧密码
-        String userpasswordMd5 = userDao.getUser(resultUser).getPassword();
+        String userpasswordMd5 = ((User) beanDao.getBean(resultUser)).getPassword();
         //用户提交的旧密码正确
         if (oldpasswordMd5.equals(userpasswordMd5)) {
             resultUser.setPassword(Md5Util.getMD5Str(newpassword));
             resultUser.setId((int)session.get("id"));
-            userDao.updateUser(resultUser);
+            beanDao.updateBean(resultUser);
             session.remove("username");
             addActionMessage("密码已修改，请重新登录!");
             return SUCCESS;
@@ -39,7 +41,7 @@ public class ChangePassAction extends ActionSupport implements SessionAware, Req
 
     private Map<String, Object> session;
     private Map<String, Object> request;
-    private UserDao userDao = new UserDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
     private String oldpassword;
     private String newpassword;
     private String repassword;

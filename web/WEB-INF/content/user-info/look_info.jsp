@@ -19,7 +19,14 @@
     <div style="margin-left: 150px">
         <span>用户名：<s:property value="#request.user.username" /></span><br><br>
         <span>姓名：<s:property value="#request.user.name" /></span><br><br>
-        <span>性别：<s:property value="#request.user.sex" /></span><br><br>
+        <span>性别：
+            <s:if test='#request.user.sex=="f"'>
+                女
+            </s:if>
+            <s:elseif test='#request.user.sex=="m"'>
+                男
+            </s:elseif>
+        </span><br><br>
         <span>生日：<s:property value="#request.user.birth" /></span><br><br>
         <span>民族：<s:property value="#request.user.nation" /></span><br><br>
         <span>学历：<s:property value="#request.user.edu" /></span><br><br>

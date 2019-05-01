@@ -1,7 +1,9 @@
 package com.hims.action.user;
 
 import com.hims.bean.User;
+import com.hims.dao.BeanDao;
 import com.hims.dao.UserDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.hims.dao.impl.UserDaoImpl;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
@@ -19,7 +21,7 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
     public String lookInfo() throws Exception {
             User resultUser = new User();
             resultUser.setId((int)session.get("id"));
-            resultUser = userDao.getUser(resultUser);
+            resultUser = (User) beanDao.getBean(resultUser);
             request.put("user", resultUser);
             return SUCCESS;
     }
@@ -31,7 +33,7 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
      */
     public String changeInfo() throws Exception {
         if (user.getId() > -1) {
-            userDao.updateUser(user);
+            beanDao.updateBean(user);
             addActionMessage("修改成功!");
             return SUCCESS;
         } else {
@@ -43,7 +45,7 @@ public class UserAction extends ActionSupport implements SessionAware, RequestAw
 
     private Map<String, Object> session;
     private Map<String, Object> request;
-    private UserDao userDao = new UserDaoImpl();
+    private BeanDao beanDao = new BeanDaoImpl();
     private User user;
 
     public Map<String, Object> getSession() {

@@ -1,24 +1,23 @@
 package com.hims.action;
 
 import com.hims.bean.User;
-import com.hims.dao.UserDao;
-import com.hims.dao.impl.UserDaoImpl;
+import com.hims.dao.BeanDao;
+import com.hims.dao.impl.BeanDaoImpl;
 import com.hims.util.Md5Util;
 import com.opensymphony.xwork2.ActionSupport;
 import org.apache.struts2.interceptor.RequestAware;
-import org.apache.struts2.interceptor.SessionAware;
 
 import java.util.Map;
 
 public class RegisterAction extends ActionSupport implements RequestAware {
     public String execute() throws Exception {
-        UserDao userDao = new UserDaoImpl();
-        if(userDao.getUser(user) == null) {
+        User thisUser = (User) beanDao.getBean(user);
+        if(thisUser == null) {
             //对密码进行MD5加密
             String password = user.getPassword();
             user.setPassword(Md5Util.getMD5Str(password));
             //将 user 存入数据库
-            userDao.insertUser(user);
+            beanDao.insertBean(user);
             addActionMessage("恭喜你,注册成功!");
             request.put("username", user.getUsername());
             return SUCCESS;
@@ -57,4 +56,5 @@ public class RegisterAction extends ActionSupport implements RequestAware {
     private User user;
     private String repassword;
     private Map<String, Object> request;
+    private BeanDao beanDao = new BeanDaoImpl();
 }
